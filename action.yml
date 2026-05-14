@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Cameron Medina"
+description: "Generatres a feed for a podcast from a YAML fiel"
+runs: 
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email: 
+    description: the committer's email address
+    required: true
+    defaul: ${{ github.actor }}@localhost
+  name:
+    description: the committer's name
+    required: true
+    default: ${{ github.actor }}
